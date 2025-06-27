@@ -21,7 +21,7 @@ export class AuthService {
                 if (user){
                     console.log("dans le if du map");
                     this.currentUser = user;
-                    localStorage.setItem('currentUser', JSON.stringify(user));
+                    sessionStorage.setItem('currentUser', JSON.stringify(user));
                     return true;
                 }
                 return false;
@@ -32,16 +32,16 @@ export class AuthService {
 
     logout():void {
         this.currentUser = null;
-        localStorage.removeItem('currentUser');
+        sessionStorage.removeItem('currentUser');
     }
 
     isLoggedIn(): boolean {
-        return this.currentUser !== null || !!localStorage.getItem('currentUser');
+        return this.currentUser !== null || !!sessionStorage.getItem('currentUser');
     }
 
     getCurrentUser(): User | null {
         if (!this.currentUser){
-            const stored = localStorage.getItem('currentUser');
+            const stored = sessionStorage.getItem('currentUser');
             if (stored){
                 this.currentUser = JSON.parse(stored);
             }

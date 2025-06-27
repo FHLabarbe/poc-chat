@@ -1,10 +1,12 @@
 [
       {
+        "id": 0,
         "username": "client",
-        "password": "password123"
+        "password": "client"
       },
       {
+        "id": 1,
         "username": "conseiller",
-        "password": "password123"
+        "password": "conseiller"
       }
     ]
