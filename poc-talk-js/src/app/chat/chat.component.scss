@@ -4,7 +4,8 @@
 }
 
 .talkjs-container{
-    height: 100%;
+    margin-top: 1rem;
+    height: 90%;
     width: 100%;
 }
 
@@ -21,5 +22,7 @@
 
 .chat-button {
     color: rgb(212, 39, 39);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
   
