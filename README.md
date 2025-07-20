@@ -2,7 +2,7 @@
 
 Ce projet est une preuve de concept d'une application Angular intégrant un système de chat via **TalkJS**. Il permet de tester un échange client-conseiller dans une interface simple.
 
-## ▶️ Lancement rapide
+## Lancement rapide
 
 ### Prérequis
 - Node.js
@@ -19,7 +19,7 @@ ng serve
 
 Accès à l’application : http://localhost:4200
 
-## 🔐 Identifiants de test
+## Identifiants de test
 
 - **Client**  
   - Login : `client`  
@@ -29,7 +29,7 @@ Accès à l’application : http://localhost:4200
   - Login : `conseiller`  
   - Mot de passe : `conseiller`
 
-## ⚠️ Remarques
+## Remarques
 
 - Aucune base de données n’est utilisée. 
 - Les identifiants sont stockés en clair dans un fichier JSON côté frontend (usage test uniquement).
