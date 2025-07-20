@@ -14,12 +14,8 @@ export class AuthService {
     login(username: string, password: string): Observable<boolean> {
         return this.http.get<User[]>(this.usersUrl).pipe(
             map(users => {
-                console.log("dans le map");
-                console.log("usersUrl value :", this.usersUrl);
                 const user = users.find(u => u.username === username && u.password === password);
-                console.log("user après assignation : ",user);
                 if (user){
-                    console.log("dans le if du map");
                     this.currentUser = user;
                     sessionStorage.setItem('currentUser', JSON.stringify(user));
                     return true;

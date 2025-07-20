@@ -30,14 +30,12 @@ export class LoginComponent implements OnInit {
 
   onSubmit(): void {
     if (this.loginForm.invalid){
-      console.log("dans invalide");
       return;
     }
     const {username, password} = this.loginForm.value;
     this.authService.login(username,password).subscribe(success => {
       if(success){
         this.loginError = '';
-        console.log("Juste avant le navigate");
         this.router.navigate(['home']); 
       } else {
         this.loginError = 'Nom d\'utilisateur ou mot de passe incorrect';
